@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 import random
 import sys
 c_s=random.randint(0,1)     #sign of computer depends on a random number in range [0,1] 
