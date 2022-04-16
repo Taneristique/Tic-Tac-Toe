@@ -57,18 +57,8 @@ int check(void){
 	};//cases that user win
 	int i,j;
 	int c=0; 
-	for(i=0;i<3;i++){ //check if game is drawn
-		for(j=0;j<3;j++){
-			c+=board[i][j]==us||board[i][j]==cs?1:0;
-		}
-		}
-			
-	if(c==9){//if true then game will be drawn
-		printf("\nNobody wins it is draw!\nPress a key to exit....");
-		getch();
-		exit(EXIT_SUCCESS);
-	}      
-	for(i=0;i<8;i++){ //then check if user or computer wins
+
+	for(i=0;i<8;i++){ //check if user or computer wins
 		if(w_c[i]==1){
 			printf("\n You won:)\nPress a key to exit....");
 			getch();
@@ -80,7 +70,17 @@ int check(void){
 			exit(EXIT_SUCCESS);
 		}
 	}
-	
+		for(i=0;i<3;i++){ //check if game is drawn
+		for(j=0;j<3;j++){
+			c+=board[i][j]==us||board[i][j]==cs?1:0;
+		}
+		}
+			
+	if(c==9){//if true then game will be drawn
+		printf("\nNobody wins it is draw!\nPress a key to exit....");
+		getch();
+		exit(EXIT_SUCCESS);
+	}      
        	
 	return 0;
 }
