@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <conio.h>
 /*FUNCTION PROTOTYPES*/
 void drawtable(void); //will print game board which is 3x3 matrix
 int check(void); //check if game is over with any result
